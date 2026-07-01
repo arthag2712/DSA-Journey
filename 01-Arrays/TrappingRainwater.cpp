@@ -1,3 +1,10 @@
+/*
+Intuition is that we don't need both prefixMax and suffixMax arrays
+Here we are iterating both ways simultaneously depending on which one is lesser and updating accordingly
+If l pointer shows a lesser value, water in l is updated, else right wala
+We are just keeping the track of left and right maximums
+*/
+
 class Solution {
 public:
     int trap(vector<int>& height) {
