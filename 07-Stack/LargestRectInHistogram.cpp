@@ -1,4 +1,4 @@
-class Solution {
+class Solution { //can still be modified to get a one pass stack approach
 public:
     int largestRectangleArea(vector<int>& heights) {
         int n = heights.size();
