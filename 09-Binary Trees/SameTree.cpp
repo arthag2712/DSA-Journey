@@ -9,19 +9,13 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
 class Solution {
 public:
-    int findMax(TreeNode* root, int& diameter){
-        if(!root) return 0;
-        int lh = findMax(root->left,diameter);
-        int rh = findMax(root->right,diameter);
-        diameter = max(diameter,lh+rh);
-        return 1+max(lh,rh);
-    }
-
-    int diameterOfBinaryTree(TreeNode* root) {
-        int diameter=0;
-        findMax(root,diameter);
-        return diameter;
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        if((!p && q) || (!q && p)) return false;
+        if(!p && !q) return true;
+        if(p->val != q->val) return false;
+        return isSameTree(p->left,q->left) && isSameTree(p->right,q->right);
     }
 };
