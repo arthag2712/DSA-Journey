@@ -7,7 +7,7 @@
     *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
     * };
     */
-
+ 
     //IDEA IS TO STORE THE PRE-ORDER TRAVERSAL WITH NULL NODES AS WELL
     //BECAUSE PRE/POST TRAVERSAL WITH NULL NODES INCL ARE SUFFICIENT TO CONSTRUCT TREE
     class Codec {
