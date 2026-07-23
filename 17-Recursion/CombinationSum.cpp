@@ -15,7 +15,7 @@ public:
         //take
         subAns.push_back(nums[idx]);
         checkSubset(subAns,nums,idx,target,currsum+nums[idx]); //just idx since repition is allowed
-        subAns.pop_back(); //backtrack: reset subAns before moving to not take
+        subAns.pop_back(); //backtrack: reset subAns before moving to not take case
         //dont take
         checkSubset(subAns,nums,idx+1,target,currsum);
     }

@@ -8,7 +8,7 @@ public:
         }
         temp.push_back(nums[idx]);
         makeSubsets(nums,idx+1,temp);
-        temp.pop_back(); //remember to pop last element as that goes into not-take thing
+        temp.pop_back(); //remember to pop last element as that goes into not-take case
         makeSubsets(nums,idx+1,temp);
     }
 
